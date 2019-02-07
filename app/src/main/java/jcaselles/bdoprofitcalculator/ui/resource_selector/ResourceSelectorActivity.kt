@@ -7,11 +7,11 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
-import com.google.android.material.snackbar.Snackbar
 import jcaselles.bdoprofitcalculator.R
 import jcaselles.bdoprofitcalculator.databinding.ActivityResourceSelectorBinding
 import jcaselles.bdoprofitcalculator.model.resource.ResourceType
 import jcaselles.bdoprofitcalculator.ui.base.BaseActivity
+import jcaselles.bdoprofitcalculator.ui.resource_details.ResourceDetailsActivity
 import jcaselles.bdoprofitcalculator.utils.OnResourceClick
 import jcaselles.bdoprofitcalculator.utils.SpaceItemDecoration
 
@@ -49,7 +49,7 @@ class ResourceSelectorActivity : BaseActivity() {
     private fun setupResourceSelectorRecycler() {
         resourcesSelectorAdapter = ResourceSelectorAdapter(onResourceClick = object : OnResourceClick {
             override fun onResourceSelected(resourceType: ResourceType) {
-
+                ResourceDetailsActivity.start(this@ResourceSelectorActivity)
             }
         })
         binding.resourceSelectorRecycler.layoutManager = GridLayoutManager(this, NUM_COLUMNS)
