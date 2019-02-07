@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BDO Profit Calculator</string>
+
+    <string name="resource_selector_toolbar_title">Resource Selector</string>
+</resources>
