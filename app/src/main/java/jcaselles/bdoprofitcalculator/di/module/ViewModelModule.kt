@@ -7,7 +7,7 @@ import dagger.Module
 import dagger.multibindings.IntoMap
 import jcaselles.bdoprofitcalculator.di.AppViewModelFactory
 import jcaselles.bdoprofitcalculator.di.ViewModelKey
-import jcaselles.bdoprofitcalculator.ui.selector.ResourceSelectorViewModel
+import jcaselles.bdoprofitcalculator.ui.resource_selector.ResourceSelectorViewModel
 
 @Module
 abstract class ViewModelModule {

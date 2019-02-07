@@ -1,3 +1,6 @@
+assets
+assets/*
+
 ### IDEA/Android Studio ignores
 *.iml
 *.ipr
