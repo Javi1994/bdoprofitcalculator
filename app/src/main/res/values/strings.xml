@@ -3,4 +3,5 @@
 
     <string name="resource_selector_toolbar_title">Resource Selector</string>
     <string name="resource_details_toolbar_title">Resource Details</string>
+    <string name="plain_processing_toolbar_title">Plain Processing</string>
 </resources>

@@ -14,16 +14,21 @@
         <activity android:name=".ui.resource_selector.ResourceSelectorActivity"
                   android:configChanges="orientation|screenSize"
                   android:screenOrientation="portrait"
-                  android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                  android:theme="@style/AppTheme.NoActionBar"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
         <activity android:name=".ui.resource_details.ResourceDetailsActivity"
                   android:configChanges="orientation|screenSize"
                   android:screenOrientation="portrait"
                   android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".ui.processing.PlainProcessingActivity"
+                  android:configChanges="orientation|screenSize"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
     </application>
 </manifest>
