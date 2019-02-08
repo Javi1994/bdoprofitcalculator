@@ -1,6 +1,8 @@
 package jcaselles.bdoprofitcalculator.extensions
 
 import android.content.Context
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
@@ -29,6 +31,17 @@ fun EditText.onDoneClick(funBind: () -> Unit) {
         }
     }
 }
+
+@BindingAdapter("onLoseFocus")
+fun EditText.onLoseFocus(funBind: () -> Unit) {
+    this.setOnFocusChangeListener { _, b ->
+        if (b) {
+        } else {
+            funBind()
+        }
+    }
+}
+
 
 @BindingAdapter("loadImage")
 fun AppCompatImageView.loadImage(image: Int) {

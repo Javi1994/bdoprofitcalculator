@@ -4,4 +4,17 @@
     <string name="resource_selector_toolbar_title">Resource Selector</string>
     <string name="resource_details_toolbar_title">Resource Details</string>
     <string name="plain_processing_toolbar_title">Plain Processing</string>
+
+    <string name="hint_quantity">Quantity</string>
+    <string name="hint_time">Minutes</string>
+    <string name="hint_t2_made">T2\'s made</string>
+    <string name="hint_t3_made">T3\'s made</string>
+
+    <string name="hint_tier_one_price">T1 price</string>
+    <string name="hint_tier_two_price">T2 price</string>
+    <string name="hint_tier_three_price">T3 price</string>
+
+    <string name="label_profit_per_t2">Profit per T2</string>
+    <string name="label_profit_per_t3">Profit per T3</string>
+    <string name="label_profit_per_hour">Profit per hour</string>
 </resources>
