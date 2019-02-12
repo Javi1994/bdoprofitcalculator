@@ -6,6 +6,10 @@ import javax.inject.Inject
 
 class PlainProcessingViewModel @Inject constructor() : BaseViewModel() {
 
+    private val T2_RATE = 1.92                  //requires 1,92 t1 to make a t2
+    private val T3_RATE = 166.11                //requires 166,11 t1 to make a t3
+    private val MARKETPLACE_STEALING = 1.18     //marketplace takes 11,8% from the original value when selling items
+
     val quantity: ObservableField<String> = ObservableField("500")
     val time: ObservableField<String> = ObservableField("10")
     val t2_made: ObservableField<String> = ObservableField("260")
@@ -23,15 +27,17 @@ class PlainProcessingViewModel @Inject constructor() : BaseViewModel() {
     fun calculateProfits() {
         val quantityValue = getValueFromString(quantity.get())
 
+        val t1Price = getValueFromString(t1_price.get())
         val t2Price = getValueFromString(t2_price.get())
         val t3Price = getValueFromString(t3_price.get())
 
-        val t2MadeValue = (quantityValue / 1.92).toInt()
-        val t3MadeValue = (quantityValue / 166.11).toInt()
+        val t1BuyingCount = t1Price * quantityValue
+        val t2MadeValue = (quantityValue / T2_RATE).toInt()
+        val t3MadeValue = (quantityValue / T3_RATE).toInt()
 
-        val profitPerT2Value = t2Price * t2MadeValue
-        val profitPerT3Value = t3Price * t3MadeValue
-        val profitPerHourValue = (profitPerT2Value + profitPerT3Value) * 6
+        val profitPerT2Value = (((t2Price * MARKETPLACE_STEALING) * t2MadeValue) * 6).toInt()
+        val profitPerT3Value = (((t3Price * MARKETPLACE_STEALING) * t3MadeValue) * 6).toInt()
+        val profitPerHourValue = profitPerT2Value + profitPerT3Value
 
         t2_made.set(t2MadeValue.toString())
         t3_made.set(t3MadeValue.toString())
