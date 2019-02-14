@@ -1,6 +1,5 @@
-package com.payproapp.domain.executor
+package jcaselles.bdoprofitcalculator.domain.executor
 
-import android.util.Log
 import timber.log.Timber
 import java.util.concurrent.*
 

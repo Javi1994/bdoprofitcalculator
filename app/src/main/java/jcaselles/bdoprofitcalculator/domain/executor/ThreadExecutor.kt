@@ -1,4 +1,4 @@
-package com.payproapp.domain.executor
+package jcaselles.bdoprofitcalculator.domain.executor
 
 import java.util.concurrent.Callable
 import java.util.concurrent.Executor

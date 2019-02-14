@@ -1,6 +1,6 @@
 package jcaselles.bdoprofitcalculator.di.module
 
-import com.payproapp.domain.executor.JobExecutor
+import jcaselles.bdoprofitcalculator.domain.executor.JobExecutor
 import dagger.Module
 import dagger.Provides
 import io.reactivex.Scheduler
