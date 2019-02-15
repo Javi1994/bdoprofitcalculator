@@ -24,7 +24,9 @@ class BossesViewModel @Inject constructor(private val app: Application) : BaseVi
 
         val broadcastIntent = Intent(app.applicationContext, BossesBroadcastReceiver::class.java)
         broadcastIntent.putExtras(bundle)
-        val alarmIntent = PendingIntent.getBroadcast(app.applicationContext, 0, broadcastIntent, 0)
+
+        val id = System.currentTimeMillis().toInt()
+        val alarmIntent = PendingIntent.getBroadcast(app.applicationContext, id, broadcastIntent, 0)
 
         alarmManager.setRepeating(
             AlarmManager.RTC_WAKEUP,

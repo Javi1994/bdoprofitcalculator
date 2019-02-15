@@ -25,22 +25,15 @@ enum class Bosses {
         schedule.add(Calendar.getInstance().apply {
             timeInMillis = System.currentTimeMillis()
             set(Calendar.DAY_OF_WEEK, 6)
-            set(Calendar.HOUR_OF_DAY, 13)
-            set(Calendar.MINUTE, 48)
+            set(Calendar.HOUR_OF_DAY, 14)
+            set(Calendar.MINUTE, 0)
         })
 
         schedule.add(Calendar.getInstance().apply {
             timeInMillis = System.currentTimeMillis()
             set(Calendar.DAY_OF_WEEK, 6)
-            set(Calendar.HOUR_OF_DAY, 13)
-            set(Calendar.MINUTE, 49)
-        })
-
-        schedule.add(Calendar.getInstance().apply {
-            timeInMillis = System.currentTimeMillis()
-            set(Calendar.DAY_OF_WEEK, 6)
-            set(Calendar.HOUR_OF_DAY, 13)
-            set(Calendar.MINUTE, 50)
+            set(Calendar.HOUR_OF_DAY, 14)
+            set(Calendar.MINUTE, 1)
         })
 
         return schedule
