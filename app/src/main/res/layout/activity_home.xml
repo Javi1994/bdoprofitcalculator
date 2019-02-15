@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".ui.resource_details.ResourceDetailsActivity">
+
+    <data>
+        <variable
+                name="onProcessingScreenClick"
+                type="android.view.View.OnClickListener"/>
+
+        <variable
+                name="onFailstackSimulatorClick"
+                type="android.view.View.OnClickListener"/>
+
+        <variable
+                name="onBossSettingsClick"
+                type="android.view.View.OnClickListener"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <include
+                android:id="@+id/app_bar"
+                layout="@layout/app_bar_default"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                app:layout_constraintTop_toBottomOf="@id/app_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:padding="30dp"
+                android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_processing"
+                    android:text="@string/button_processing_screen"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="0dp"
+                    android:onClick="@{onProcessingScreenClick}"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_failstacks_simulator"
+                    android:text="@string/button_failtstack_simulator"
+                    app:layout_constraintTop_toBottomOf="@id/btn_processing"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textAllCaps="false"
+                    android:layout_width="0dp"
+                    android:onClick="@{onFailstackSimulatorClick}"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                    app:layout_constraintTop_toBottomOf="@id/btn_failstacks_simulator"
+                    android:id="@+id/btn_boss_settings"
+                    android:text="@string/button_boss_alerts_screen"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="0dp"
+                    android:textAllCaps="false"
+                    android:onClick="@{onBossSettingsClick}"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

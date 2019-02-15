@@ -1,10 +1,20 @@
 <resources>
     <string name="app_name">BDO Profit Calculator</string>
 
+    <!-- Toolbar titles -->
+    <string name="home_toolbar_title">Home</string>
     <string name="resource_selector_toolbar_title">Resource Selector</string>
     <string name="resource_details_toolbar_title">Resource Details</string>
     <string name="plain_processing_toolbar_title">Plain Processing</string>
+    <string name="boss_settings_toolbar_title">Boss Settings</string>
+    <string name="failstack_simulator_toolbar_title">Failstack Simulator</string>
 
+    <!-- Home Activity -->
+    <string name="button_processing_screen">Processing Profit Calculator</string>
+    <string name="button_failtstack_simulator">Failstack Simulator</string>
+    <string name="button_boss_alerts_screen">Boss Settings</string>
+
+    <!-- Plain Processing Activity -->
     <string name="hint_quantity">Quantity</string>
     <string name="hint_time">Minutes</string>
     <string name="hint_t2_made">T2\'s made</string>
