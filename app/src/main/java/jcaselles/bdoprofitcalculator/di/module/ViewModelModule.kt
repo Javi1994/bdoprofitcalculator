@@ -7,6 +7,7 @@ import dagger.Module
 import dagger.multibindings.IntoMap
 import jcaselles.bdoprofitcalculator.di.AppViewModelFactory
 import jcaselles.bdoprofitcalculator.di.ViewModelKey
+import jcaselles.bdoprofitcalculator.ui.bosses.BossesViewModel
 import jcaselles.bdoprofitcalculator.ui.processing.PlainProcessingViewModel
 import jcaselles.bdoprofitcalculator.ui.resource_details.ResourceDetailsViewModel
 import jcaselles.bdoprofitcalculator.ui.resource_selector.ResourceSelectorViewModel
@@ -30,4 +31,9 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(PlainProcessingViewModel::class)
     abstract fun bindPlainProcessingViewModel(plainProcessingViewModel: PlainProcessingViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(BossesViewModel::class)
+    abstract fun bindBossesViewModel(bossesViewModel: BossesViewModel): ViewModel
 }

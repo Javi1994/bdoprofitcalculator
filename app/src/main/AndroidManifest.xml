@@ -52,5 +52,7 @@
                   android:configChanges="orientation|screenSize"
                   android:screenOrientation="portrait"
                   android:theme="@style/AppTheme.NoActionBar"/>
+
+        <receiver android:name=".ui.bosses.BossesBroadcastReceiver"/>
     </application>
 </manifest>

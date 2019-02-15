@@ -9,6 +9,8 @@
     <string name="boss_settings_toolbar_title">Boss Settings</string>
     <string name="failstack_simulator_toolbar_title">Failstack Simulator</string>
 
+    <string name="save">Save</string>
+
     <!-- Home Activity -->
     <string name="button_processing_screen">Processing Profit Calculator</string>
     <string name="button_failtstack_simulator">Failstack Simulator</string>
@@ -27,4 +29,8 @@
     <string name="label_profit_per_t2">Profit per T2</string>
     <string name="label_profit_per_t3">Profit per T3</string>
     <string name="label_profit_per_hour">Profit per hour</string>
+
+    <!-- Bosses -->
+    <string name="notifaction_boss_title">Boss near</string>
+    <string name="notification_boss_near">There is a boss in 15 minutes</string>
 </resources>
